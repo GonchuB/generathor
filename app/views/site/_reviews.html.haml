@@ -1,0 +1,17 @@
+%section
+  %h1 Positive Reviews
+  - reviews.each do |review|
+    %p
+      = review.body
+      %br
+      Food
+      = review.food
+      Service
+      = review.service
+      Ambient
+      = review.ambient
+      %br
+      Hecho por:
+      = review.user.full_name
+      el
+      = l(review.updated_at, format: :short)

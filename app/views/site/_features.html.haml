@@ -1,0 +1,11 @@
+%section
+  %h2 Features
+  %p
+    Possible features:
+    %br
+    = restaurant.features.keys.join(",")
+  - restaurant.features.reject { |_, v| v == "no_info" }.each do |name, values|
+    %p
+      = name
+      %br
+      = Array(values).reject(&:blank?).join(", ")

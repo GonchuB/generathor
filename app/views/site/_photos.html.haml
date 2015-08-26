@@ -1,0 +1,4 @@
+%section
+  %h2 Approved Photos
+  - photos.each do |approved_photo|
+    %img{ src: approved_photo.photo.best.url, alt: approved_photo.id }

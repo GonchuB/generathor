@@ -1,3 +1,9 @@
 = render "hero", restaurant: @restaurant
 
 = render "main", restaurant: @restaurant
+
+= render "reviews", reviews: @restaurant.positive_reviews.where.not(body: nil).order(updated_at: :desc).limit(3)
+
+= render "photos", photos: @restaurant.approved_photos
+
+= render "features", restaurant: @restaurant
