@@ -1,0 +1,11 @@
+development:
+  adapter: mysql2
+  database: restorando_dev
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: mysql2
+  database: restorando_test
+  pool: 5
+  timeout: 5000
