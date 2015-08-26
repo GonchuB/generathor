@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "/" => "site#index"
+  get "/:slug" => "site#index"
 end

@@ -1,0 +1,37 @@
+---
+development:
+  cloud_name: restorando-dev
+  api_key: '639517252126871'
+  api_secret: N1PKTaUs54MUFoKbv6woMHaTqAg
+  enhance_image_tag: true
+  static_image_support: false
+  secure: true
+test:
+  cloud_name: restorando-dev
+  api_key: '639517252126871'
+  api_secret: N1PKTaUs54MUFoKbv6woMHaTqAg
+  enhance_image_tag: true
+  static_image_support: false
+  secure: true
+staging:
+  cloud_name: restorando
+  api_key: '533318652779493'
+  api_secret: bXVAGkkx5GIklxdK6TZX0mokZJc
+  cdn_subdomain: true
+  cname: images-cdn.restorando.net
+  enhance_image_tag: true
+  private_cdn: true
+  secure_distribution: restorando-res.cloudinary.com
+  static_image_support: true
+  secure: true
+production:
+  cloud_name: restorando
+  api_key: '533318652779493'
+  api_secret: bXVAGkkx5GIklxdK6TZX0mokZJc
+  cdn_subdomain: true
+  cname: images-cdn.restorando.net
+  enhance_image_tag: true
+  private_cdn: true
+  secure_distribution: restorando-res.cloudinary.com
+  static_image_support: true
+  secure: true
