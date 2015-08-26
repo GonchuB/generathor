@@ -1,28 +1,28 @@
-== README
+# generathor
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Restorando restaurant static site generator.
 
-Things you may want to cover:
+## Stack
 
-* Ruby version
+- Rails 4.1.10 [(+)](http://www.jquery.com/)
+- jQuery [(+)](http://www.jquery.com/)
+- CoffeeScript [(+)](http://coffeescript.org/)
+- Haml [(+)](http://haml.info/)
+- Sass [(+)](http://sass-lang.com/)
 
-* System dependencies
+## Dependencies
+Restorando database configured in ```config/database.yml```
 
-* Configuration
+## Running the project
 
-* Database creation
+1. Install project dependencies
+    ```sh
+    bin/bundle install
+    ```
 
-* Database initialization
+2. Run server on port 8000
+    ```sh
+    bin/rails s -p 8000
+    ```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+3. Navigate to [127.0.0.1:8000](http://127.0.0.1:8000)
