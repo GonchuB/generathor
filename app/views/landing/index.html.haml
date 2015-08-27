@@ -1,0 +1,71 @@
+!!!
+%html.wf-brandongrotesque-i1-active.wf-brandongrotesque-i3-active.wf-brandongrotesque-i4-active.wf-brandongrotesque-i5-active.wf-brandongrotesque-i7-active.wf-brandongrotesque-n1-active.wf-brandongrotesque-n3-active.wf-brandongrotesque-n4-active.wf-brandongrotesque-n5-active.wf-brandongrotesque-n7-active.wf-active.js.flexbox.canvas.no-touch.cssanimations.cssgradients.csstransforms.csstransforms3d.csstransitions.generatedcontent.video.svg.inlinesvg
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Generathor
+    = stylesheet_link_tag "landing"
+  %body
+    .wrapper.pg-home.clean-load
+      .slider-wrap.landing-angle
+        .slider-ctn
+          %section.landing.landing-large.text-lt.flex-active-slide{:style => "padding-top: 228px; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2; background-image: url(http://40huuk1e5l5qxr2m59m9x88c.wpengine.netdna-cdn.com/wp-content/uploads/2014/10/Homepage-Banners1.jpg);"}
+            .ctn
+              %h1.title Reach consumers across channels and devices.
+              %h3.subtitle Increase response rate and sales lift by reaching your audience with relevant messages anywhere, anytime and on any device.
+              .btn-ctn
+                %a.btn.bg-grey-dk.orange-hover{ href: "#", scroll_to: "#features" }
+                  Learn More
+
+      %section.block.bg-white.block-angle-up.block-text-dk.z-index-40#features
+        .ctn
+          %header.header-block
+            %h1.title Onboard your data and unleash new possibilities
+            %h3.subtitle Data Onboarding with LiveRamp Connect brings your CRM, sales, and other customer data into the digital marketing applications and media platforms you use every day. When your data is activated for use in online marketing campaigns, so much more is possible.
+          .block-icons
+            .block-icon-ctn
+              %a{ href: "#" }
+                %h4.icon-title.text-orange Measurement
+              %p.icon-cnt Measure the impact of digital marketing on in-store purchases and online sales
+            .block-icon-ctn
+              %a{ href: "#" }
+                %h4.icon-title.text-blue Targeting
+              %p.icon-cnt Use customer data to define audience segments for online campaigns
+            .block-icon-ctn
+              %a{ href: "#" }
+                %h4.icon-title.text-green-lt One-To-One Marketing
+              %p.icon-cnt Increase conversion rates by using customer data to optimize content for websites and online ads
+
+      %section.block.bg-green-lt.block-angle-down.block-text-lt.block-bg-img.has-extra-padding-bottom.z-index-38{:style => "background-image: url(http://40huuk1e5l5qxr2m59m9x88c.wpengine.netdna-cdn.com/wp-content/uploads/2014/10/integrations-block-bg.jpg);"}
+        .ctn
+          %header.header-block
+            %h1.title More than 200 integrations at your fingertips
+            %h3.subtitle Connect your marketing infrastructure at the data layer
+          .cnt
+            %p Gain the benefits of an integrated marketing stack while preserving the flexibility to choose which technologies you want to use. Make each of your digital marketing applications and media platforms perform better by providing access to more customer data.
+          .btn-ctn
+            %a.btn.bg-grey-dk.orange-hover{ href: "#" }
+              View our Partners
+
+      %footer.footer
+        .footer-btn-bar
+          .footer-btn-ctn
+            %a.footer-btn{ href: "mailto:support@restorando.com" }
+              Ask a Question
+          .footer-btn-ctn
+            %a.footer-btn{ href: "mailto:support@restorando.com" }
+              Become a Partner
+          .footer-btn-ctn
+            %a.footer-btn{ href: "/la-cabrera" }
+              Show me an example
+
+    = javascript_include_tag 'application'
+
+    :coffeescript
+      $(document).ready ->
+        $("[scroll_to]").click ->
+          selector = $(this).attr("scroll_to")
+          $('html, body').animate({
+              scrollTop: $(selector).offset().top
+          }, 1000)

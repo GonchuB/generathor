@@ -1,5 +1,16 @@
--#%restorando-widget{ restaurant_id: restaurant.id, type: :horizontal, width: 640, height: 160 }
-%restorando-widget{ restaurant_id: 1, type: :horizontal, width: 640, height: 160 }
+%button#book-now
+  Book Now
+
+#widget-modal{ style: "display: none", height: 470, width: 280 }
+  %restorando-widget{ restaurant_id: 1, type: :vertical, height: 470, width: 280 }
 
 - content_for :local_js do
   = javascript_include_tag "http://widgets.restorando.com/reservation-widget.js"
+
+  :coffeescript
+    $(document).ready ->
+      $("#book-now").click ->
+        modal = new VanillaModal()
+        modal.open("#widget-modal")
+        $(".modal-inner").height($("#widget-modal").attr("height") + "px")
+        $(".modal-inner").width($("#widget-modal").attr("width") + "px")
