@@ -27,34 +27,7 @@
   #main.browser-height.main-photo{:style => "position:relative;background-image:url(#{image_path('portada/portada1.jpg')});background-size:cover;background-position:center;"}
     %span{:style => "position:absolute;left:30px;bottom:20px;color:#fff;"} PH Andrés Cardonna Mejía
 
-  #bio.bio-section
-    .wrapper-inner
-      .break-4
-      .break-4
-      .arrow-up-1
-      .title-section.wow.fadeInUp BIOGRAFÍA
-      .break-2
-      .break-1
-      .row
-        .col.column-4.column-t2-4.column-m-12.wow.fadeInUp
-          %img{:src => image_path("bio/biografia2.jpg")}
-          %span PH Santiago Redondo
-          .break-2
-        .col.column-8.column-t2-8.column-m-12.wow.fadeInUp
-          %p
-            %span A
-            = succeed "\u{a0}es" do
-              %strong ldana Aguirre
-          %p Su carrera como bajista profesional comenzó en 2011, cuando trabajó junto al legendario tecladista "Ciro Fogliatta" (ex Los Gatos), con quien recorrió escenarios de todo el país en diversas giras. Entre los momentos más importantes se encuentran el show que realizaron en el "1er festival de verano de Blues" realizado en la trastienda siendo invitados por Botafogo, y la apertura de los dos shows de Jhon Fogerty (Creedence)  en la Argentina, compartiendo escenario junto a Brian Ray (Guitarrista de Paul Mc Cartney), en el mítico estadio Luna Park de la ciudad de Buenos Aires.
-          %p En 2012 y 2013, Aldana Aguirre continuó pisando escenarios importantes, como el del homenaje a Pappo, el teatro Vorterix con Ale Kurz (El Bordo) como artista invitado, o la presentación del disco "El rey del Rock & Roll" en La Trasrtienda. Además, se presentó en el Festival de Blues en Pergamino, abriendo la presentación de Jimmy Burns (El legítimo "Chicago Blues Leyend").
-          %p Durante esos años, también ingresó al grupo de Javier Zuppi, músico solista con el cual realizó varios shows, y con quien tuvo una importante presencia en prensa y difusión.
-          %p Ya en 2014 es convocada para formar parte de la banda de Facundo Arana (reconocido actor y músico argentino), con quien gira por todo el país con gran éxito y, en menos de un año, realiza dos shows en "La Trastienda", dejando localidades agotadas, hacen la presentación para prensa del disco "Salir a tocar" en el teatro Sony y abren el show de "Enrique Iglesias" en el Estadio Luna Park.
-          %p En junio de ese año viaja con Javier Zuppi a Colombia para realizar shows y presentaciones de prensa, abriendo su experiencia internacional, y en octubre forma parte de la banda de Larry Braggs (ex cantante de "Tower of power", una de las bandas de Soul y Funk más importantes del mundo) en su gira por Argentina.
-          %p Junto a Larry Braggs realiza un impactante show en "La Trastienda", y participa de entrevistas en medios masivos de comunicación.
-          %p A comienzos de 2015, Aldana Aguirre es convocada por Lito Vitale para formar parte del proyecto "Se trata de nosotras", una lujosa convocatoria que reúne a las mas importantes figuras femeninas de la música argentina en la actualidad, entre las que se encuentran Liliana Herrero, Hilda Lizarazu, Luciana Jury, Roxana Carabajal, Miss Bolivia y Andrea Álvarez, entre otras. Junto a este grupo, participa de shows multitudinarios  recorriendo diferentes puntos de Argentina. Para el festejo del 25 de Mayo realizan un show televisado desde la Plaza de Mayo con una convocatoria de más de 100.000 personas.
-          %p En este mismo año Aldana es convocada para el especial realizado por el día de la mujer por la TV Pública titulado “Somos Todas” en el cual participaron reconocidas personalidades de diferentes partes del mundo.
-      .break-4
-      .break-4
+  = render "description", restaurant: @restaurant, image: @restaurant.photos.reject(&:primary).first
 
   #galery.galery-section.browser-height
     .wrapper-inner
@@ -232,8 +205,6 @@
     });
 
 = render "hero", restaurant: @restaurant
-
-= render "main", restaurant: @restaurant
 
 = render "reviews", reviews: @restaurant.positive_reviews.where.not(body: nil).order(updated_at: :desc).limit(3)
 

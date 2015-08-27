@@ -1,0 +1,35 @@
+#bio.bio-section
+  .wrapper-inner
+    .break-4
+    .break-4
+    .arrow-up-1
+    .title-section.wow.fadeInUp DESCRIPCIÓN
+    .break-2
+    .break-1
+    .row
+      .col.column-4.column-t2-4.column-m-12.wow.fadeInUp
+        %img{ src: image.photo.best.url }
+        %span PH Santiago Redondo
+        .break-2
+      .col.column-8.column-t2-8.column-m-12.wow.fadeInUp
+        - restaurant.description.split("\n").each do |parragraph|
+          %p= parragraph
+    .break-4
+    .break-4
+
+-#%section
+  %h1= restaurant.name
+  - %i[description fbpage_id disclaimer primary_cuisine].each do |property|
+    %p
+      = property
+      %br
+      = restaurant.try(property)
+
+-#%section
+  %h1 Ordered Cuisines
+  - restaurant.ordered_cuisines.each do |cuisine|
+    %p
+      = cuisine.name
+      (
+      = cuisine.slogan
+      )
