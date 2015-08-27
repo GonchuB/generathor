@@ -2,30 +2,7 @@
   = @restaurant.name
 
 .wrapper
-  %header
-    %a{:href => "#main"}
-      .logo
-    .menu-wrapper
-      .left.hide-t
-        %a{:href => "#bio"} BIOGRAFIA
-        %a{:href => "#galery"} GALERIA
-      .right.hide-t
-        %a{:href => "#videos"} VIDEOS
-        %a{:href => "#contact"} CONTACTO
-      %div{:style => "width:100%; float:left; position:relative"}
-        .menu-button.hide-l
-  .menu-mobile.hide-l
-    %ul
-      %a{:href => "#bio"}
-        %li BIOGRAFIA
-      %a{:href => "#galery"}
-        %li GALERIA
-      %a{:href => "#videos"}
-        %li VIDEOS
-      %a{:href => "#contact"}
-        %li CONTACTO
-  #main.browser-height.main-photo{:style => "position:relative;background-image:url(#{image_path('portada/portada1.jpg')});background-size:cover;background-position:center;"}
-    %span{:style => "position:absolute;left:30px;bottom:20px;color:#fff;"} PH Andrés Cardonna Mejía
+  = render "hero", restaurant: @restaurant
 
   #bio.bio-section
     .wrapper-inner
@@ -230,8 +207,6 @@
         $('.menu-wrapper').addClass('fadein2');
       }, 2000);
     });
-
-= render "hero", restaurant: @restaurant
 
 = render "main", restaurant: @restaurant
 

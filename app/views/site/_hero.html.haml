@@ -1,2 +1,25 @@
-.hero
-  = t('.title')
+%header
+  %a{:href => "#main"}
+    .logo= restaurant.name
+  .menu-wrapper
+    .left.hide-t
+      = restaurant.name
+    .right.hide-t
+      %a{:href => "#bio"} BIOGRAFIA
+      %a{:href => "#galery"} GALERIA
+      %a{:href => "#videos"} VIDEOS
+      %a{:href => "#contact"} CONTACTO
+    %div{:style => "width:100%; float:left; position:relative"}
+      .menu-button.hide-l
+.menu-mobile.hide-l
+  %ul
+    %a{:href => "#bio"}
+      %li BIOGRAFIA
+    %a{:href => "#galery"}
+      %li GALERIA
+    %a{:href => "#videos"}
+      %li VIDEOS
+    %a{:href => "#contact"}
+      %li CONTACTO
+#main.browser-height.main-photo{:style => "position:relative;background-image:url(#{image_path('portada/portada1.jpg')});background-size:cover;background-position:center;"}
+  %span{:style => "position:absolute;left:30px;bottom:20px;color:#fff;"} PH Andrés Cardonna Mejía
