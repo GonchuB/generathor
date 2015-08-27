@@ -14,4 +14,5 @@
 #= require jquery_ujs
 #= require photoswipe/photoswipe
 #= require photoswipe/photoswipe-ui-default
+#= require vanilla-modal/vanilla-modal
 #= require_tree .
