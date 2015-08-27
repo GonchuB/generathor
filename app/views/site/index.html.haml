@@ -1,6 +1,236 @@
 - content_for :title do
   = @restaurant.name
 
+.wrapper
+  %header
+    %a{:href => "#main"}
+      .logo
+    .menu-wrapper
+      .left.hide-t
+        %a{:href => "#bio"} BIOGRAFIA
+        %a{:href => "#galery"} GALERIA
+      .right.hide-t
+        %a{:href => "#videos"} VIDEOS
+        %a{:href => "#contact"} CONTACTO
+      %div{:style => "width:100%; float:left; position:relative"}
+        .menu-button.hide-l
+  .menu-mobile.hide-l
+    %ul
+      %a{:href => "#bio"}
+        %li BIOGRAFIA
+      %a{:href => "#galery"}
+        %li GALERIA
+      %a{:href => "#videos"}
+        %li VIDEOS
+      %a{:href => "#contact"}
+        %li CONTACTO
+  #main.browser-height.main-photo{:style => "position:relative;background-image:url(#{image_path('portada/portada1.jpg')});background-size:cover;background-position:center;"}
+    %span{:style => "position:absolute;left:30px;bottom:20px;color:#fff;"} PH Andrés Cardonna Mejía
+
+  #bio.bio-section
+    .wrapper-inner
+      .break-4
+      .break-4
+      .arrow-up-1
+      .title-section.wow.fadeInUp BIOGRAFÍA
+      .break-2
+      .break-1
+      .row
+        .col.column-4.column-t2-4.column-m-12.wow.fadeInUp
+          %img{:src => image_path("bio/biografia2.jpg")}
+          %span PH Santiago Redondo
+          .break-2
+        .col.column-8.column-t2-8.column-m-12.wow.fadeInUp
+          %p
+            %span A
+            = succeed "\u{a0}es" do
+              %strong ldana Aguirre
+          %p Su carrera como bajista profesional comenzó en 2011, cuando trabajó junto al legendario tecladista "Ciro Fogliatta" (ex Los Gatos), con quien recorrió escenarios de todo el país en diversas giras. Entre los momentos más importantes se encuentran el show que realizaron en el "1er festival de verano de Blues" realizado en la trastienda siendo invitados por Botafogo, y la apertura de los dos shows de Jhon Fogerty (Creedence)  en la Argentina, compartiendo escenario junto a Brian Ray (Guitarrista de Paul Mc Cartney), en el mítico estadio Luna Park de la ciudad de Buenos Aires.
+          %p En 2012 y 2013, Aldana Aguirre continuó pisando escenarios importantes, como el del homenaje a Pappo, el teatro Vorterix con Ale Kurz (El Bordo) como artista invitado, o la presentación del disco "El rey del Rock & Roll" en La Trasrtienda. Además, se presentó en el Festival de Blues en Pergamino, abriendo la presentación de Jimmy Burns (El legítimo "Chicago Blues Leyend").
+          %p Durante esos años, también ingresó al grupo de Javier Zuppi, músico solista con el cual realizó varios shows, y con quien tuvo una importante presencia en prensa y difusión.
+          %p Ya en 2014 es convocada para formar parte de la banda de Facundo Arana (reconocido actor y músico argentino), con quien gira por todo el país con gran éxito y, en menos de un año, realiza dos shows en "La Trastienda", dejando localidades agotadas, hacen la presentación para prensa del disco "Salir a tocar" en el teatro Sony y abren el show de "Enrique Iglesias" en el Estadio Luna Park.
+          %p En junio de ese año viaja con Javier Zuppi a Colombia para realizar shows y presentaciones de prensa, abriendo su experiencia internacional, y en octubre forma parte de la banda de Larry Braggs (ex cantante de "Tower of power", una de las bandas de Soul y Funk más importantes del mundo) en su gira por Argentina.
+          %p Junto a Larry Braggs realiza un impactante show en "La Trastienda", y participa de entrevistas en medios masivos de comunicación.
+          %p A comienzos de 2015, Aldana Aguirre es convocada por Lito Vitale para formar parte del proyecto "Se trata de nosotras", una lujosa convocatoria que reúne a las mas importantes figuras femeninas de la música argentina en la actualidad, entre las que se encuentran Liliana Herrero, Hilda Lizarazu, Luciana Jury, Roxana Carabajal, Miss Bolivia y Andrea Álvarez, entre otras. Junto a este grupo, participa de shows multitudinarios  recorriendo diferentes puntos de Argentina. Para el festejo del 25 de Mayo realizan un show televisado desde la Plaza de Mayo con una convocatoria de más de 100.000 personas.
+          %p En este mismo año Aldana es convocada para el especial realizado por el día de la mujer por la TV Pública titulado “Somos Todas” en el cual participaron reconocidas personalidades de diferentes partes del mundo.
+      .break-4
+      .break-4
+
+  #galery.galery-section.browser-height
+    .wrapper-inner
+      .break-4
+      .break-4
+      .arrow-up-2
+      .title-section.wow.fadeInUp GALERÍA
+      .break-2
+      .break-1
+      %section.slider.wow.fadeInUp
+        .next
+        .prev
+        .row
+          .container
+            %div{:style => "display: inline-block;"}
+              %img{:src => image_path("gal/galeria1.jpg")}
+              %span PH Mariana Galli
+            %div
+              %img{:src => image_path("gal/galeria2.jpg")}
+              %span PH Mariana Galli
+            %div
+              %img{:src => image_path("gal/galeria3.jpg")}
+              %span PH Mariana Galli
+            %div
+              %img{:src => image_path("gal/galeria4.jpg")}
+              %span PH Pablo Marchese
+            %div
+              %img{:src => image_path("gal/galeria5.jpg")}
+              %span -
+            %div
+              %img{:src => image_path("gal/galeria6.jpg")}
+              %span -
+            %div
+              %img{:src => image_path("gal/galeria7.jpg")}
+              %span PH Maximiliano Fontela
+            %div
+              %img{:src => image_path("gal/galeria8.jpg")}
+              %span Ph Noe Arregui
+            %div
+              %img{:src => image_path("gal/galeria9.jpg")}
+              %span PH Santiago Redondo
+            %div
+              %img{:src => image_path("gal/galeria10.jpg")}
+              %span PH Marina Alvarez
+            %div
+              %img{:src => image_path("gal/galeria11.jpg")}
+              %span -
+            %div
+              %img{:src => image_path("gal/galeria12.jpg")}
+              %span PH Savi Rodriguez Villegas
+      .break-4
+      .break-4
+
+  #videos.videos-section
+    .wrapper-inner
+      .break-4
+      .break-4
+      .arrow-up-1
+      .title-section.wow.fadeInUp VIDEOS
+      .break-2
+      .break-1
+      .row
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=D12TU-aTO54", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/1-larry.jpg")}
+            .video-title Larry Braggs & the Top Queens
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=kllzt8GO4po", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/2-respirar.jpg")}
+            .video-title Javier Zuppi - Respirar
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=-umshZ4obUg", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/3-diario.jpg")}
+            .video-title Facundo Arana & TBLO en Diario de Medianoche
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=Gn-jUmIFXDI", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/4-horadelte.jpg")}
+            .video-title Javier Zuppi - La Hora del Te
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=tlAbKOZrRPo", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/5-vision7.jpg")}
+            .video-title Aldana Aguirre y Ciro Fogliatta en Visión Siete
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=CUMeMQMYhmU", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/6-c5n.jpg")}
+            .video-title Con Javier Zuppi y banda en C5N
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=pP2xCZ8s_Bo", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/7-cm.jpg")}
+            .video-title Ciro Fogliatta y Las Blusettes en CM
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=0-vAg7d0jow", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/8-atenta.jpg")}
+            .video-title Javier Zuppi - Atenta
+        .col.column-4.column-t-6.column-m-12.wow.fadeInUp
+          %a.hover-video{:href => "https://www.youtube.com/watch?v=vC-VzA4mCFA", :target => "_blank"}
+            .video-icon
+            %img{:src => image_path("videos/9-miss.jpg")}
+            .video-title Somos Todas - Miss Bolivia
+      .break-4
+      .break-4
+
+  #contact.contact-section
+    .wrapper-inner
+      .break-4
+      .break-4
+      .arrow-up-3
+      .title-section-2.wow.fadeInUp CONTACTO
+      .break-2
+      .break-1
+      .row
+        .col.column-8.column-t-12.wow.fadeInUp
+          %img{:src => image_path("contacto.jpg")}
+          %p{:style => "color:#fff;"} PH Santiago Redondo
+          .break-3
+        .col.column-4.column-t-12
+          .contact-info
+            %p.contact-title.wow.fadeInLeft MAIL
+            %a{:href => "mailto:aldanabass@gmail.com"}
+              %p.wow.fadeInLeft aldanabass@gmail.com
+            %p.contact-title.wow.fadeInLeft REDES
+            %p.wow.fadeInLeft
+              %a{:href => "http://facebook.com/aldanaaguirreoficial", :target => "_blank"} facebook.com/aldanaaguirreoficial
+              %br
+              %a.wow.fadeInLeft{:href => "http://twitter.com/aldanabass", :target => "_blank"} twitter.com/aldanabass
+              %br
+              %a.wow.fadeInLeft{:href => "http://youtube.com/aldanaaguirrebass", :target => "_blank"} youtube.com/aldanaaguirrebass
+              %br
+              %a.wow.fadeInLeft{:href => "http://instagram.com/aldanabass", :target => "_blank"} instagram.com/aldanabass
+      .break-4
+      .break-4
+
+  %footer
+    .wrapper-inner.wow.fadeIn
+      .left Aldana Aguirre © 2015. Todos los derechos reservados.
+      .right.hide-t
+        Hecho por
+        %a{:href => "http://pickinstudio.com", :style => "font-weight:bold;", :target => "_blank"}
+          %img{:src => image_path("pickin.png")}
+
+- content_for :local_js do
+  :javascript
+    new WOW().init();
+
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+
+    $(document).ready(function() {
+      setTimeout(function(){
+        $('header').addClass('loading-header');
+      }, 1000);
+      setTimeout(function(){
+        $('.menu-wrapper').addClass('fadein2');
+      }, 2000);
+    });
+
 = render "hero", restaurant: @restaurant
 
 = render "main", restaurant: @restaurant
