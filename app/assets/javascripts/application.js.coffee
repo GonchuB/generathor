@@ -12,4 +12,6 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= require photoswipe/photoswipe
+#= require photoswipe/photoswipe-ui-default
 #= require_tree .
