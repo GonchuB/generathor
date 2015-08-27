@@ -2,9 +2,9 @@
 %html
   %head
     %meta{ content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
-    %title Generathor
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    %title= yield :title
+    = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
   %body
     = yield
+    = javascript_include_tag 'application'
