@@ -15,4 +15,5 @@
 #= require photoswipe/photoswipe
 #= require photoswipe/photoswipe-ui-default
 #= require vanilla-modal/vanilla-modal
+#= require wow/wow
 #= require_tree .
